@@ -20,7 +20,15 @@ interface TrendingMovie {
   movie_id: number;
   title: string;
   count: number;
-  poster_url: string;
+  poster_path: string;
+}
+
+interface SavedMovie {
+  searchTerm: string;
+  movie_id: number;
+  title: string;
+  is_movie_saved: boolean;
+  poster_path: string;
 }
 
 interface MovieDetails {
@@ -74,4 +82,8 @@ interface MovieDetails {
 interface TrendingCardProps {
   movie: TrendingMovie;
   index: number;
+}
+
+interface SavedCardProps {
+  movie: SavedMovie;
 }
